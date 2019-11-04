@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard - User</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<div id="myNav" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<div class="overlay-content">
+			<a href="dashboard.html"  class="profile--user">
+				<img src="images/user.png" alt=""> Jhone
+			</a>
+			<a href="daftar-user.html">Daftar User</a>
+			<a href="daftar-produk.html">Daftar Produk</a>
+			<a href="daftar-pembelian.html">Daftar Pembelian</a>
+			<a href="#!">Logout</a>
+		</div>
+	</div>
+
+	<div class="container margin--jarak">
+
+		<div class="logo--gambar">
+			<img src="images/logo.png" alt="">
+		</div>
+		
+		<div class="sidebar">
+			<a href="dashboard.html"  class="profile--user">
+				<img src="images/user.png" alt=""> Jhone
+			</a>
+			<a href="daftar-user.html" class="active">Dafter User</a>
+			<a href="daftar-produk.html">Daftar Produk</a>
+			<a href="daftar-pembelian.html">Daftar Pembelian</a>
+			<a href="#!">Logout</a>
+			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+		</div>
+
+		<div class="content">
+			<div class="row">
+				<div class="col-6">
+					<h1 class="margin-0">Daftar User</h1>
+				</div>
+				<div class="col-6 text-right">
+					<a href="user/tambah-user.html" class="btn btn--green d-inline-block">Tambah User</a>
+				</div>
+			</div>
+			<div class="table--responsive">
+				<table class="table--data">
+					<tr>
+						<th>No</th>
+						<th>Nama</th>
+						<th>Email</th>
+						<th>Status</th>
+						<th>Aksi</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Jhon</td>
+						<td>Jhone@test.test</td>
+						<td>Admin</td>
+						<td>
+							<a href="user/edit-user.html" class="btn btn--sm">Edit</a>
+							<a href="#!" class="btn btn--sm btn--red">Block</a>
+						</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Jhon</td>
+						<td>Jhone@test.test</td>
+						<td>Pembeli</td>
+						<td>
+							<a href="user/edit-user.html" class="btn btn--sm">Edit</a>
+							<a href="#!" class="btn btn--sm btn--red">Block</a>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		function openNav() {
+			document.getElementById("myNav").style.height = "100%";
+		}
+
+		function closeNav() {
+			document.getElementById("myNav").style.height = "0%";
+		}
+	</script>
+
+</body>
+</html>

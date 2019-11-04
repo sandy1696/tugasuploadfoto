@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+
+	<div id="myNav" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<div class="overlay-content">
+			<a href="../dashboard.html"  class="profile--user">
+				<img src="../images/user.png" alt=""> Jhone
+			</a>
+			<a href="../daftar-user.html">Daftar User</a>
+			<a href="../daftar-produk.html">Daftar Produk</a>
+			<a href="../daftar-pembelian.html">Daftar Pembelian</a>
+			<a href="#!">Logout</a>
+		</div>
+	</div>
+
+	<div class="container margin--jarak">
+
+		<div class="logo--gambar">
+			<img src="../images/logo.png" alt="">
+		</div>
+		
+		<div class="sidebar">
+			<a href="../dashboard.html"  class="profile--user">
+				<img src="../images/user.png" alt=""> Jhone
+			</a>
+			<a href="../daftar-user.html">Dafter User</a>
+			<a href="../daftar-produk.html" class="active">Daftar Produk</a>
+			<a href="../daftar-pembelian.html">Daftar Pembelian</a>
+			<a href="#!">Logout</a>
+			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+		</div>
+
+		<div class="content">
+			<h1>Tambah Produk</h1>
+
+			<div class="form--data">
+				<form action="">
+					<div class="form-group">
+						<label>Nama Produk</label>
+						<input type="text" class="form-control">
+					</div>
+					<div class="form-group">
+						<label>Jumlah</label>
+						<input type="text" class="form-control">
+					</div>
+					<div class="form-group file--upload">
+						<label>Foto</label>
+						<input type="file" class="form-control">
+					</div>
+					<div class="form-group">
+						<label>Harga</label>
+						<input type="text" class="form-control">
+					</div>
+					<button class="btn">SUbmit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script>
+		function openNav() {
+			document.getElementById("myNav").style.height = "100%";
+		}
+
+		function closeNav() {
+			document.getElementById("myNav").style.height = "0%";
+		}
+	</script>
+	<script type="text/javascript">
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          $('.image--preview').attr('src', e.target.result);
+      }
+      $('.image--type').html(input.files[0].type);
+      $('.image--name').html(input.files[0].name);
+      $('.image--size').html(input.files[0].size);
+      reader.readAsDataURL(input.files[0]);
+      // console.log(input.files);
+     //  var image = new Image();
+     //  image.src = input.files.target.result();
+     //  image.onload = function () {
+     //     console.log(this.width + " " + this.height);
+     // };
+ }
+}
+$('.file--upload input').change(function () {
+    $('.image--detail-all').remove();
+    $('.file--upload').append(`
+        <div class="grid-row image--detail-all">
+        <div class="grid-item-6">
+        <img class="image--preview" src="Resources/img/beach-calm-clouds-457882.jpg" alt="">
+        </div>
+        <div class="grid-item-6">
+        <ul class="ul__list">
+        <li>Nama foto : <span class="image--name"></span></li>
+        <li>Size : <span class="image--size"></span></li>
+        <li>type : <span class="image--type"></span></li>
+        </ul>
+        </div>
+        </div>
+        `);
+    readURL(this);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard - produk</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<div id="myNav" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<div class="overlay-content">
+			<a href="dashboard.html"  class="profile--user">
+				<img src="images/user.png" alt=""> Jhone
+			</a>
+			<a href="daftar-user.html">Daftar User</a>
+			<a href="daftar-produk.html">Daftar Produk</a>
+			<a href="daftar-pembelian.html">Daftar Pembelian</a>
+			<a href="#!">Logout</a>
+		</div>
+	</div>
+
+	<div class="container margin--jarak">
+
+		<div class="logo--gambar">
+			<img src="images/logo.png" alt="">
+		</div>
+		
+		<div class="sidebar">
+			<a href="dashboard.html"  class="profile--user">
+				<img src="images/user.png" alt=""> Jhone
+			</a>
+			<a href="daftar-user.html">Dafter User</a>
+			<a href="daftar-produk.html" class="active">Daftar Produk</a>
+			<a href="daftar-pembelian.html">Daftar Pembelian</a>
+			<a href="#!">Logout</a>
+			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+		</div>
+
+
+		<div class="content">
+			<div class="row">
+				<div class="col-6">
+					<h1 class="margin-0">Daftar Produk</h1>
+				</div>
+				<div class="col-6 text-right">
+					<a href="Produk/tambah-produk.html" class="btn btn--green d-inline-block">Tambah Produk</a>
+				</div>
+			</div>
+			<div class="table--responsive">
+				<table class="table--data">
+					<tr>
+						<th>No</th>
+						<th>Nama</th>
+						<th>Jumlah</th>
+						<th>Harga</th>
+						<th>Aksi</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Bohlam Hias</td>
+						<td>2</td>
+						<td>IDR 150.000</td>
+						<td>
+							<a href="produk/edit-produk.html" class="btn btn--sm btn--purple">Ubah</a>
+							<a href="#!" class="btn btn--sm btn--red">Delete</a>
+						</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Bohlam Hias</td>
+						<td>2</td>
+						<td>IDR 150.000</td>
+						<td>
+							<a href="produk/edit-produk.html" class="btn btn--sm btn--purple">Ubah</a>
+							<a href="#!" class="btn btn--sm btn--red">Delete</a>
+						</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Bohlam Hias</td>
+						<td>2</td>
+						<td>IDR 150.000</td>
+						<td>
+							<a href="produk/edit-produk.html" class="btn btn--sm btn--purple">Ubah</a>
+							<a href="#!" class="btn btn--sm btn--red">Delete</a>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		function openNav() {
+			document.getElementById("myNav").style.height = "100%";
+		}
+
+		function closeNav() {
+			document.getElementById("myNav").style.height = "0%";
+		}
+	</script>
+
+</body>
+</html>
